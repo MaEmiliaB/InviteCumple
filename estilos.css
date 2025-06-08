@@ -163,17 +163,24 @@ body {
   color: #333;
 }
 
-.confirmar-container input {
+.confirmar-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.confirmar-form input {
   padding: 10px;
   font-size: 16px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  margin-right: 10px;
   width: 60%;
   max-width: 300px;
 }
 
-.confirmar-container button {
+.confirmar-form button {
   padding: 10px 20px;
   background-color: #68b984;
   color: white;
@@ -184,9 +191,10 @@ body {
   transition: background-color 0.3s;
 }
 
-.confirmar-container button:hover {
+.confirmar-form button:hover {
   background-color: #519f6e;
 }
+
 
 /* Estilo responsivo */
 @media (max-width: 768px) {
@@ -201,11 +209,6 @@ body {
   }
 
 }
-
-.confirmar-container input {
-    width: 80%;
-}
-
 
 #confeti {
   position: fixed;
