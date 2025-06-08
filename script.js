@@ -57,18 +57,21 @@ document.getElementById('rsvpForm').addEventListener('submit', function(e) {
   });
 });
 
-// Ajustar canvas al tamaño de la pantalla
 const canvas = document.getElementById('confeti');
 const ctx = canvas.getContext('2d');
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
 
-// Crear partículas de confeti
+// Inicializamos canvas con el tamaño actual
+resizeCanvas();
+
 const confettis = [];
 
-const isMobile = window.innerWidth <= 768;  // Punto de corte para móvil
-const cantidadConfeti = isMobile ? 50 : 150;  // Menos confeti en móvil
+const isMobile = window.innerWidth <= 768;
+const cantidadConfeti = isMobile ? 50 : 150;
 
 for (let i = 0; i < cantidadConfeti; i++) {
   confettis.push({
@@ -82,8 +85,6 @@ for (let i = 0; i < cantidadConfeti; i++) {
     tiltAngleIncrement: Math.random() * 0.1 + 0.05
   });
 }
-
-// Resto del código igual
 
 function drawConfetti() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -115,5 +116,9 @@ function updateConfetti() {
   });
 }
 
-drawConfetti();
+// Para que canvas se ajuste si cambias el tamaño de ventana
+window.addEventListener('resize', () => {
+  resizeCanvas();
+});
 
+drawConfetti();
