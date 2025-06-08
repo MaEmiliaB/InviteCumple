@@ -141,9 +141,9 @@ body {
   background-color: #d6788c;
   color: white;
   text-decoration: none;
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-size: 16px;
+  padding: 6px 12px;         /* Más chico que 8px 16px */
+  border-radius: 6px;        /* Suaviza el borde */
+  font-size: 14px;           /* Más pequeño que 16px */
   transition: background-color 0.3s ease;
 }
 
