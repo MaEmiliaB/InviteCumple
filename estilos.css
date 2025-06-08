@@ -202,10 +202,10 @@ body {
 
 }
 
-  .confirmar-container input {
+.confirmar-container input {
     width: 80%;
-  }
 }
+
 
 #confeti {
   position: fixed;
