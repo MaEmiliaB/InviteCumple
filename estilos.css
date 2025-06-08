@@ -60,16 +60,18 @@ body {
 /* Tarjeta de invitación */
 .card {
   display: none;
-  width: 100vw;
-  height: 100vh;
-  background-image: url('images/card.jpg'); /* Cambia esta imagen */
+  /* Cambiar width y height para que no ocupen todo el viewport */
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('images/card.jpg'); /* mantén la imagen */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .event-box {
@@ -78,7 +80,7 @@ body {
   border-radius: 20px;
   text-align: center;
   width: 90%;
-  max-width: 900px; /* Más ancho */
+  max-width: 380px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
@@ -190,21 +192,15 @@ body {
 @media (max-width: 768px) {
   .event-box {
     padding: 20px;
+    max-width: 90vw; /* que tome 90% del ancho de la pantalla */
   }
 
   .event-image {
     max-width: 100%;
+    height: auto;
   }
 
-  .countdown {
-    font-size: 1.2rem;
-    padding: 10px 20px;
-  }
-
-  .map-link {
-    padding: 10px 15px;
-    font-size: 16px;
-  }
+}
 
   .confirmar-container input {
     width: 80%;
@@ -219,4 +215,22 @@ body {
   height: 100%;
   pointer-events: none;
   z-index: 9999;
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
+.event-box h1 {
+  font-size: 2rem;
+}
+
+@media (max-width: 400px) {
+  .event-box h1 {
+    font-size: 1.6rem;
+  }
+
+  .event-box p {
+    font-size: 1rem;
+  }
 }
