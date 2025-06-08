@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+body {
+  overflow: auto;
+}
+
+/* Pantalla de acceso */
+.access-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #d6788c;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.access-box {
+  background-color: #444444;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.access-box input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 200px;
+  font-size: 16px;
+}
+
+.access-box button {
+  padding: 10px 20px;
+  background-color: #d6788c;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#errorMessage {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Tarjeta de invitación */
+.card {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('images/card.jpg'); /* Cambia esta imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.event-box {
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  width: 90%;
+  max-width: 900px; /* Más ancho */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event-image {
+  width: 100%;
+  max-width: 600px; /* Ajusta el tamaño según lo desees */
+  height: auto;
+  margin: 15px auto;
+  display: block;
+}
+
+.event-box h1 {
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: #d6788c;
+}
+
+.event-box p {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.event-box a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007BFF;
+  text-decoration: none;
+}
+
+/* Cuenta regresiva */
+.countdown {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+  color: #ff4d4d;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px 20px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 300px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Mapa */
+.map-link {
+  display: inline-block;
+  background-color: #d6788c;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.map-link:hover {
+  background-color: #b75c73;
+}
+
+/* Confirmación */
+.confirmar-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.confirmar-title {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.confirmar-container input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  width: 60%;
+  max-width: 300px;
+}
+
+.confirmar-container button {
+  padding: 10px 20px;
+  background-color: #68b984;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.confirmar-container button:hover {
+  background-color: #519f6e;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+  .event-box {
+    padding: 20px;
+  }
+
+  .event-image {
+    max-width: 100%;
+  }
+
+  .countdown {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+
+  .map-link {
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+
+  .confirmar-container input {
+    width: 80%;
+  }
+}
+
+#confeti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}

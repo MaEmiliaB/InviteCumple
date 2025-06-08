@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invitación</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Pantalla de acceso -->
+  <div class="access-screen" id="accessScreen">
+    <div class="access-box">
+      <h2>Ingrese el código de acceso</h2>
+      <input type="password" id="accessCode" placeholder="Código" />
+      <button onclick="checkCode()">Entrar</button>
+      <p id="errorMessage"></p>
+    </div>
+  </div>
+
+  <!-- Tarjeta de invitación -->
+  <div class="card" id="invitationCard">
+    <div class="event-box">
+         
+      <img src="images/tarjeta.png" alt="Decoración" class="event-image" />
+   
+      <div class="countdown" id="countdown"></div>
+
+      <div class="map-container">
+          <a 
+          href="https://maps.app.goo.gl/tw2jWcmvpcvthb1KA" 
+          target="_blank" 
+          class="map-link">
+          <h2>📍Rayuela - Larroude 58</h2>
+        </a>
+      </div>
+            
+      <section class="confirmar-container">
+        <h2 class="confirmar-title">¿Confirmás tu asistencia?</h2>
+      
+        <form id="rsvpForm" action="https://formsubmit.co/e.bazanazargado@gmail.com" method="POST" id="form">
+          <input type="text" name="nombre" placeholder="Tu nombre" required>
+          <button type="submit">Confirmar</button>
+        </form>
+        
+        <!-- Mensaje de confirmación que ve el invitado -->
+        <div id="mensajeConfirmacion" style="display: none; margin-top: 20px; text-align: center;">
+          <p>🎉 ¡Te espero para divertirnos!
+            <a href="https://drive.google.com/file/d/1ekd1AtgVRogH-Zyj1_gWwZnmg44HuG3Z/view?usp=sharing" target="_blank">Descargá tu invitación</a>
+          </p>
+        </div>
+         
+      </section>
+             
+      </div>
+      
+    </div>
+  </div>
+<audio id="musica" src="sound/capybara song.mp3" loop></audio>
+
+<script>
+  window.addEventListener('click', function () {
+    const musica = document.getElementById('musica');
+    musica.play();
+  }, { once: true });
+</script>
+
+<canvas id="confeti"></canvas>
+
+</body>
+</html>
