@@ -67,7 +67,10 @@ canvas.height = window.innerHeight;
 // Crear partículas de confeti
 const confettis = [];
 
-for (let i = 0; i < 150; i++) {
+const isMobile = window.innerWidth <= 768;  // Punto de corte para móvil
+const cantidadConfeti = isMobile ? 50 : 150;  // Menos confeti en móvil
+
+for (let i = 0; i < cantidadConfeti; i++) {
   confettis.push({
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height - canvas.height,
@@ -80,7 +83,8 @@ for (let i = 0; i < 150; i++) {
   });
 }
 
-// Dibujar confeti
+// Resto del código igual
+
 function drawConfetti() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -97,7 +101,6 @@ function drawConfetti() {
   requestAnimationFrame(drawConfetti);
 }
 
-// Actualizar posiciones
 function updateConfetti() {
   confettis.forEach(c => {
     c.y += Math.cos(c.d) + 1 + c.r / 2;
@@ -105,7 +108,6 @@ function updateConfetti() {
     c.tiltAngle += c.tiltAngleIncrement;
     c.tilt = Math.sin(c.tiltAngle) * 15;
 
-    // Reiniciar cuando cae fuera de pantalla
     if (c.y > canvas.height) {
       c.y = -20;
       c.x = Math.random() * canvas.width;
@@ -113,5 +115,5 @@ function updateConfetti() {
   });
 }
 
-// Iniciar animación
 drawConfetti();
+
