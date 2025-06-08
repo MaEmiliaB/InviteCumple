@@ -1,7 +1,6 @@
-// Código de acceso
 function checkCode() {
-  const codeInput = document.getElementById('accessCode').value;
-  const correctCode = "catacumple"; // Cambiá este código si querés
+  const codeInput = document.getElementById('accessCode').value.toLowerCase();
+  const correctCode = "catacumple"; // código correcto también en minúsculas
 
   if (codeInput === correctCode) {
     document.getElementById('accessScreen').style.display = "none";
