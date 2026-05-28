@@ -13,7 +13,7 @@ function checkCode() {
 
 // Cuenta regresiva
 function startCountdown() {
-  const eventDate = new Date("2025-06-15T17:00:00").getTime(); // Cambiá la fecha/hora
+  const eventDate = new Date("2026-06-20T16:00:00").getTime(); // Cambiá la fecha/hora
 
   const countdownEl = document.getElementById("countdown");
 
@@ -122,3 +122,5 @@ window.addEventListener('resize', () => {
 });
 
 drawConfetti();
+
+card.style.opacity = "1";

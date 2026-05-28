@@ -4,10 +4,21 @@
   box-sizing: border-box;
 }
 
+:root {
+  --stitch-blue: #4fa3d9;
+  --stitch-dark: #1f5f8b;
+  --angel-pink: #ff8fc7;
+  --angel-soft: #ffd3e6;
+  --sand: #fff4dc;
+  --white: #ffffff;
+}
+
+
+
 html, body {
   height: 100%;
   width: 100%;
-  font-family: sans-serif;
+  font-family: 'Fredoka', sans-serif;
 }
 
 body {
@@ -21,7 +32,11 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #d6788c;
+  background: linear-gradient(
+  180deg,
+  #6ec6ff 0%,
+  #8fd3ff 35%,
+  #ffd3e6 100%);
   color: white;
   display: flex;
   justify-content: center;
@@ -30,26 +45,45 @@ body {
 }
 
 .access-box {
-  background-color: #444444;
-  padding: 30px;
-  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255,255,255,0.3);
+  padding: 35px;
+  border-radius: 25px;
   text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .access-box input {
-  padding: 10px;
-  margin: 10px 0;
-  width: 200px;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  width: 220px;
   font-size: 16px;
+  text-align: center;
+  background-color: rgba(255,255,255,0.9);
 }
 
-.access-box button {
-  padding: 10px 20px;
-  background-color: #d6788c;
+.access-box button,
+.confirmar-form button,
+.map-link {
+  background: linear-gradient(
+    135deg,
+    #4fa3d9,
+    #ff8fc7
+  );
   border: none;
   color: white;
-  cursor: pointer;
-  border-radius: 5px;
+  font-weight: bold;
+  border-radius: 12px;
+  transition: 0.3s ease;
+  .access-box button:hover,
+  .confirmar-form button:hover,
+  .map-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
 }
 
 #errorMessage {
@@ -74,17 +108,22 @@ body {
   box-sizing: border-box;
 }
 
+
 .event-box {
-  background-color: rgba(255, 255, 255, 0.92);
-  padding: 40px;
-  border-radius: 20px;
-  text-align: center;
-  width: 90%;
-  max-width: 380px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(10px);
+  border: 3px solid rgba(255,255,255,0.4);
+  border-radius: 30px;
+  animation: popIn 0.8s ease;
+}
+
+.event-box h1 {
+  color: #1f5f8b;
+  font-size: 3rem;
+  font-family: 'Comic Sans MS', cursive;
+  text-shadow:
+    2px 2px 0 #fff,
+    4px 4px 10px rgba(0,0,0,0.15);
 }
 
 .event-image {
@@ -115,18 +154,11 @@ body {
 
 /* Cuenta regresiva */
 .countdown {
-  font-size: 16px;
-  font-weight: bold;
+  background: rgba(255,255,255,0.5);
+  border: 2px dashed #ff8fc7;
+  color: #1f5f8b;
   text-align: center;
-  margin: 20px 0;
-  color: #ff4d4d;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 10px 20px;
-  border-radius: 12px;
-  width: 80%;
-  max-width: 300px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  animation: pulse 1.5s infinite;
+  font-size: 14px;
 }
 
 @keyframes pulse {
@@ -137,7 +169,7 @@ body {
 
 /* Mapa */
 .map-link {
-  display: inline-block;
+  align-items: center;
   background-color: #d6788c;
   color: white;
   text-decoration: none;
@@ -235,5 +267,37 @@ body, html {
 
   .event-box p {
     font-size: 1rem;
+  }
+}
+
+body::before {
+  content: "🌺";
+  position: fixed;
+  top: 40px;
+  left: 30px;
+  font-size: 40px;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+body::after {
+  content: "🫧";
+  position: fixed;
+  bottom: 60px;
+  right: 40px;
+  font-size: 35px;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
