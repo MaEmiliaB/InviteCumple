@@ -12,8 +12,8 @@
   <!-- Pantalla de acceso -->
   <div class="access-screen" id="accessScreen">
     <div class="access-box">
-      <h2>Ingrese el código de acceso</h2>
-      <input type="password" id="accessCode" placeholder="Código" />
+      <h2>🌺 Ingresá tu nombre secreto ✨</h2>
+      <input type="password" id="accessCode" placeholder="Tu nombre secreto 🌺" />
       <button onclick="checkCode()">Entrar</button>
       <p id="errorMessage"></p>
     </div>
@@ -22,6 +22,8 @@
   <!-- Tarjeta de invitación -->
   <div class="card" id="invitationCard">
     <div class="event-box">
+      <p id="welcomeMessage"></p>
+      <p class="ohana-text"> Ohana significa familia 💙</p>
          
       <img src="images/tarjeta.jpg" alt="Decoración" class="event-image" />
    
@@ -32,17 +34,12 @@
           href="https://maps.app.goo.gl/tw2jWcmvpcvthb1KA" 
           target="_blank" 
           class="map-link">
-          <h2>📍Rayuela - Larroude 58</h2>
+          <h2>📍Salón CoosPu</h2>
         </a>
       </div>
             
       <section class="confirmar-container">
       <h2 class="confirmar-title">¿Confirmás tu asistencia?</h2>
-
-        <form id="rsvpForm" class="confirmar-form" action="https://formsubmit.co/e.bazanazargado@gmail.com" method="POST">
-          <input type="text" name="nombre" placeholder="Tu nombre" required>
-          <button type="submit">Confirmar</button>
-        </form>
 
         <!-- Mensaje de confirmación -->
         <div id="mensajeConfirmacion" style="display: none; margin-top: 20px; text-align: center;">
@@ -51,8 +48,6 @@
           </p>
         </div>
       </section>
-    </div>
-      
     </div>
   </div>
   <audio id="musica" src="sound/Hawaiian Roller Coaster Ride (From Lilo & Stitch).mp3" loop></audio>

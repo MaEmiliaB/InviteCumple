@@ -13,8 +13,6 @@
   --white: #ffffff;
 }
 
-
-
 html, body {
   height: 100%;
   width: 100%;
@@ -78,12 +76,13 @@ body {
   font-weight: bold;
   border-radius: 12px;
   transition: 0.3s ease;
-  .access-box button:hover,
-  .confirmar-form button:hover,
-  .map-link:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255,255,255,0.5);
 }
+
+.access-box button:hover,
+.confirmar-form button:hover,
+.map-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,255,255,0.5);
 }
 
 #errorMessage {
@@ -101,26 +100,23 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
-
-.event-box {
-  background: rgba(255,255,255,0.75);
-  backdrop-filter: blur(10px);
-  border: 3px solid rgba(255,255,255,0.4);
-  border-radius: 30px;
-  animation: popIn 0.8s ease;
+.ohana-text {
+  color: #ff8fc7;
+  margin-bottom: 20px;
+  font-size: 1rem;
 }
 
 .event-box h1 {
   color: #1f5f8b;
   font-size: 3rem;
-  font-family: 'Comic Sans MS', cursive;
   text-shadow:
     2px 2px 0 #fff,
     4px 4px 10px rgba(0,0,0,0.15);
@@ -169,62 +165,21 @@ body {
 
 /* Mapa */
 .map-link {
-  align-items: center;
+  display: block;
+  width: fit-content;
+  margin: 15px auto;
+  
   background-color: #d6788c;
   color: white;
   text-decoration: none;
-  padding: 6px 12px;         /* Más chico que 8px 16px */
-  border-radius: 6px;        /* Suaviza el borde */
-  font-size: 14px;           /* Más pequeño que 16px */
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
   transition: background-color 0.3s ease;
 }
 
 .map-link:hover {
   background-color: #b75c73;
-}
-
-/* Confirmación */
-.confirmar-container {
-  margin-top: 30px;
-  text-align: center;
-}
-
-.confirmar-title {
-  font-size: 22px;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.confirmar-form {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.confirmar-form input {
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  width: 60%;
-  max-width: 300px;
-}
-
-.confirmar-form button {
-  padding: 10px 20px;
-  background-color: #68b984;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.confirmar-form button:hover {
-  background-color: #519f6e;
 }
 
 
@@ -300,4 +255,13 @@ body::after {
     transform: scale(1);
     opacity: 1;
   }
+}
+
+#welcomeMessage {
+  font-size: 1.5rem;
+  color: #1f5f8b;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+  animation: popIn 0.8s ease;
 }
