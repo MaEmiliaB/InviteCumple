@@ -36,6 +36,15 @@
       </div>          
       <section class="confirmar-container">
       <h2 class="confirmar-title">¿Confirmás tu asistencia?</h2>
+        <form id="confirmForm">
+          <select id="asistencia" required>
+            <option value="">Seleccioná una opción</option>
+            <option value="Sí">Sí, asistiré</option>
+            <option value="No">No podré asistir</option>
+          </select>
+
+          <button type="submit">Confirmar</button>
+        </form>
 
         <!-- Mensaje de confirmación -->
         <div id="mensajeConfirmacion" style="display: none; margin-top: 20px; text-align: center;">

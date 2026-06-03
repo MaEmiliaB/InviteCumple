@@ -1,6 +1,15 @@
+let invitadoActual = "";
+
 const invitados = {
   "catarinap": "Catarina",
-  "valentinoc": "Valentino"
+  "valentinop": "Vale",
+  "valentinoc": "Vale",
+  "valentinos": "Vale",
+  "lucap": "Luca",
+  "Romanellap": "Roma",
+  "Renattap":"Tutti",
+  "Irupeb":"Irupé",
+
 };
 
 function checkCode() {
@@ -12,6 +21,7 @@ function checkCode() {
     .trim();
 
   const nombre = invitados[codeInput];
+  invitadoActual = nombre;
 
   if (nombre) {
 
@@ -137,3 +147,37 @@ drawConfetti();
 
 const card = document.getElementById("invitationCard");
 card.style.opacity = "1";
+
+document.getElementById("confirmForm")
+  .addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    const asistencia =
+      document.getElementById("asistencia").value;
+
+    try {
+
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbx_AIkhLp7Gyg09UD4fei6ZfAS1rh0Z-z6uSJrLDxrWs8-wj35SfSkkKNyhUGABF3sjNw/exec",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            nombre: invitadoActual,
+            asistencia: asistencia
+          })
+        }
+      );
+
+      document.getElementById("confirmForm").style.display = "none";
+
+      document.getElementById("mensajeConfirmacion")
+        .style.display = "block";
+
+    } catch(error) {
+
+      alert("No se pudo registrar la confirmación.");
+      console.error(error);
+
+    }
+});
