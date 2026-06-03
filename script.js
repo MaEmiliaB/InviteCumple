@@ -1,13 +1,45 @@
-function checkCode() {
-  const codeInput = document.getElementById('accessCode').value.toLowerCase();
-  const correctCode = "catacumple"; // código correcto también en minúsculas
+const invitados = {
+  "catarinap": "Catarina",
+  "valentinoc": "Valentino"
+};
 
-  if (codeInput === correctCode) {
+function checkCode() {
+
+  const codeInput = document
+    .getElementById('accessCode')
+    .value
+    .toLowerCase()
+    .trim();
+
+  const nombre = invitados[codeInput];
+
+  if (nombre) {
+
+    document.getElementById('errorMessage').textContent = "";
+
     document.getElementById('accessScreen').style.display = "none";
-    document.getElementById('invitationCard').style.display = "flex";
-    startCountdown(); // Inicia el contador al mostrar la tarjeta
+
+    const card = document.getElementById('invitationCard');
+
+    card.style.display = "flex";
+
+    setTimeout(() => {
+      card.style.opacity = "1";
+    }, 100);
+
+    document.getElementById("welcomeMessage")
+      .textContent = `¡Aloha ${nombre}! 🌺`;
+
+    startCountdown();
+
+    setTimeout(() => {
+      document.getElementById("confeti").style.display = "none";
+    }, 3000);
+
   } else {
-    document.getElementById('errorMessage').textContent = "Código incorrecto.";
+
+    document.getElementById('errorMessage')
+      .textContent = "Nombre secreto incorrecto 💔";
   }
 }
 
@@ -35,27 +67,7 @@ function startCountdown() {
     countdownEl.innerHTML = `Faltan: ${days}d ${hours}h ${minutes}m ${seconds}s`;
   }, 1000);
 }
-document.getElementById('rsvpForm').addEventListener('submit', function(e) {
-  e.preventDefault(); // Prevenir la redirección del formulario
 
-  const formData = new FormData(this);
-
-  fetch(this.action, {
-    method: 'POST',
-    body: formData
-  })
-  .then(response => {
-    if (response.ok) {
-      // Mostrar mensaje de confirmación en la misma página
-      document.getElementById('mensajeConfirmacion').style.display = 'block';
-    } else {
-      alert("Hubo un error al enviar el formulario. Intenta nuevamente.");
-    }
-  })
-  .catch(error => {
-    alert("Error de red. Intenta nuevamente.");
-  });
-});
 
 const canvas = document.getElementById('confeti');
 const ctx = canvas.getContext('2d');
@@ -123,4 +135,5 @@ window.addEventListener('resize', () => {
 
 drawConfetti();
 
+const card = document.getElementById("invitationCard");
 card.style.opacity = "1";
