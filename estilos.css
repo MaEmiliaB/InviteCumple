@@ -113,10 +113,29 @@ body {
   margin-bottom: 20px;
   font-size: 1rem;
 }
+.event-box {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+
+  width: 90%;
+  max-width: 450px;
+
+  padding: 20px;
+
+  border-radius: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 15px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
 
 .event-box h1 {
   color: #1f5f8b;
-  font-size: 3rem;
+  font-size: 8rem;
   text-shadow:
     2px 2px 0 #fff,
     4px 4px 10px rgba(0,0,0,0.15);
@@ -128,12 +147,6 @@ body {
   height: auto;
   margin: 15px auto;
   display: block;
-}
-
-.event-box h1 {
-  margin-bottom: 20px;
-  font-size: 36px;
-  color: #d6788c;
 }
 
 .event-box p {
@@ -211,10 +224,6 @@ body, html {
   overflow-x: hidden;
 }
 
-.event-box h1 {
-  font-size: 2rem;
-}
-
 @media (max-width: 400px) {
   .event-box h1 {
     font-size: 1.6rem;
@@ -223,26 +232,6 @@ body, html {
   .event-box p {
     font-size: 1rem;
   }
-}
-
-body::before {
-  content: "🌺";
-  position: fixed;
-  top: 40px;
-  left: 30px;
-  font-size: 40px;
-  opacity: 0.4;
-  z-index: 1;
-}
-
-body::after {
-  content: "🫧";
-  position: fixed;
-  bottom: 60px;
-  right: 40px;
-  font-size: 35px;
-  opacity: 0.4;
-  z-index: 1;
 }
 
 @keyframes popIn {
@@ -258,10 +247,11 @@ body::after {
 }
 
 #welcomeMessage {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #1f5f8b;
-  margin-bottom: 15px;
+  margin-bottom: 0;
   font-weight: bold;
   text-align: center;
   animation: popIn 0.8s ease;
+  font-family: 'Bubblegum Sans', cursive;
 }
