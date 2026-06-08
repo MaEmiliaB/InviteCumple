@@ -159,9 +159,10 @@ document.getElementById("confirmForm")
     try {
 
       await fetch(
-        "https://script.google.com/macros/s/AKfycbx_AIkhLp7Gyg09UD4fei6ZfAS1rh0Z-z6uSJrLDxrWs8-wj35SfSkkKNyhUGABF3sjNw/exec",
+        "https://script.google.com/macros/s/AKfycbxscc3tkS9Qvg5OU5NG6aeup5qKDbDSbsnm3AYosF9iJbdTv1WCsGBG-oDnI-hBnHoB3A/exec",
         {
           method: "POST",
+          mode: "no-cors",
           body: JSON.stringify({
             nombre: invitadoActual,
             asistencia: asistencia
