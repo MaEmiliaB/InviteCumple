@@ -159,7 +159,7 @@ document.getElementById("confirmForm")
     try {
 
       await fetch(
-        "https://script.google.com/macros/s/AKfycbxscc3tkS9Qvg5OU5NG6aeup5qKDbDSbsnm3AYosF9iJbdTv1WCsGBG-oDnI-hBnHoB3A/exec",
+        "https://script.google.com/macros/s/AKfycbxGkW6YTaEm1kKedn_GhpkUXUTkdVsr5Y_2fuklYybMGZWwDNyPrtffZ2-BE9W0czZHgw/exec",
         {
           method: "POST",
           mode: "no-cors",
