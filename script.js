@@ -1,19 +1,41 @@
 let invitadoActual = "";
 
 const invitados = {
+  "aluheq":"Aluhé",
+  "renatag":"Renata",
+  "martind":"Martín",
+  "julietar":"Juli",
+  "matteom":"Matteo", 
+  "bastianm":"Basti",
+  "romanellar":"Roma",
+  "valentinoc":"Vale",
+  "indiac":"India", 
+  "mateop":"Mateo",
+  "aitanao":"Aitana",
+  "hannaf":"Hanna",
+  "arunaf":"Aruna",
+  "marthinam":"Marti",
+  "brianas":"Briana",
+  "emmac":"Emma",
+
+  "emiliaf":"Emi",
+  "catalinag":"Cata",
+  "mateop":"Mateo",
+  "benicios":"Beni",
+
   "catarinap": "Catarina",
-  "valentinop": "Vale",
   "lucap": "Luca",
-  "Romanellap": "Roma",
-  "Renattap":"Tutti",
-  "Irupeb":"Irupé",
-  "Orlandop":"Papá",
-  "hortensiaa":"Abu",
-  "Nestorp":"Abuelo Nestor",
-  "Carlosb":"Abuelo Carlos",
-  "Norapony":"Tios abuelos",
+  "primos": "Vale, Tutti y Roma",
+  "irupeb":"Irupé",
+  "orlandop":"Papá",
+  "abuela":"Abu",
+  "abuelon":"Abuelo Nestor",
+  "abueloc":"Abuelo Carlos",
+  "norapony":"Tios abuelos",
   "gabrielad":"Gaby",
-  };
+  "marial":"Abuela Mari",
+  "thianluis":"Thian y Luis",
+};
 
 function checkCode() {
 
