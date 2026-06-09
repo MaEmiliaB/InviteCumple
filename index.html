@@ -13,7 +13,6 @@
   <!-- Pantalla de acceso -->
   <div class="access-screen" id="accessScreen">
     <div class="access-box">
-      <h2>🌺 Ingresá tu nombre secreto ✨</h2>
       <input type="password" id="accessCode" placeholder="Tu nombre secreto 🌺" />
       <button onclick="checkCode()">Entrar</button>
       <p id="errorMessage"></p>
@@ -28,14 +27,13 @@
       <div class="countdown" id="countdown"></div>
       <div class="map-container">
           <a 
-          href="https://maps.app.goo.gl/tw2jWcmvpcvthb1KA" 
+          href="https://maps.app.goo.gl/QtsQQmDsZoxVrcDq9"
           target="_blank" 
           class="map-link">
           <h2>📍Salón CoosPu</h2>
         </a>
       </div>          
       <section class="confirmar-container">
-      <h2 class="confirmar-title">¿Confirmás tu asistencia?</h2>
         <form id="confirmForm">
           <select id="asistencia" required>
             <option value="">Seleccioná una opción</option>
@@ -44,13 +42,12 @@
           </select>
           <button type="submit">Confirmar</button>
         </form>
-
-        <!-- Mensaje de confirmación -->
-        <div id="mensajeConfirmacion" style="display: none; margin-top: 20px; text-align: center;">
-          <p>🎉 ¡Te espero para divertirnos!
-            <a href="https://drive.google.com/file/d/1xKnRV_d6SNOJz9KaFXIA4q2T_R2Nz5_H/view?usp=sharing" target="_blank">Descargá tu invitación</a>
-          </p>
-        </div>
+          <div id="mensajeConfirmacion" style="display: none; margin-top: 20px; text-align: center;"> <!-- Mensaje de confirmación -->
+            <p>🎉 ¡Te espero para divertirnos!
+              <a href="images/tarjeta_catarina.jpg" download>📥 Descargar invitación </a>
+              <a href="cumple_catarina.ics"> 📅 Agendar en mi calendario </a>
+            </p>
+          </div>
       </section>
     </div>
   </div>

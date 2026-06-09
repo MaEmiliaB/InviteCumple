@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cumple Catarina//ES
+BEGIN:VEVENT
+UID:cumple-catarina-2026
+DTSTAMP:20260601T120000Z
+SUMMARY:Cumple de Catarina 🌺
+DTSTART:20260620T160000
+DTEND:20260620T190000
+LOCATION:Salon de Eventos Infantiles CoosPu, Conhello 22, 25 de Mayo, La Pampa
+DESCRIPTION:¡Te esperamos para festejar el cumpleaños de Catarina!
+END:VEVENT
+END:VCALENDAR
