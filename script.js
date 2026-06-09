@@ -3,14 +3,17 @@ let invitadoActual = "";
 const invitados = {
   "catarinap": "Catarina",
   "valentinop": "Vale",
-  "valentinoc": "Vale",
-  "valentinos": "Vale",
   "lucap": "Luca",
   "Romanellap": "Roma",
   "Renattap":"Tutti",
   "Irupeb":"Irupé",
-
-};
+  "Orlandop":"Papá",
+  "hortensiaa":"Abu",
+  "Nestorp":"Abuelo Nestor",
+  "Carlosb":"Abuelo Carlos",
+  "Norapony":"Tios abuelos",
+  "gabrielad":"Gaby",
+  };
 
 function checkCode() {
 
