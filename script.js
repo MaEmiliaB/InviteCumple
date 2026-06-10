@@ -64,7 +64,7 @@ function checkCode() {
 
     document.getElementById("welcomeMessage")
       .textContent = `¡Aloha ${nombre} 
-                     vamos a festejar! 🌺`;
+               vamos a festejar! 🌺`;
 
     startCountdown();
 
