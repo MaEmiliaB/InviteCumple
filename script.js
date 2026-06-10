@@ -35,6 +35,9 @@ const invitados = {
   "gabrielad":"Gaby",
   "marial":"Abuela Mari",
   "thianluis":"Thian y Luis",
+  "horaciop":"Padrino",
+  "gimenap":"Primas",
+  "nestorp":"Primos",
 };
 
 function checkCode() {
