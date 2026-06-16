@@ -17,11 +17,14 @@ const invitados = {
   "marthinam":"Marti",
   "brianas":"Briana",
   "emmac":"Emma",
+  "joaquins":"Joaquin",
+  "rocio":"Seño Roci",
 
   "emiliaf":"Emi",
   "catalinag":"Cata",
   "mateop":"Mateo",
   "benicios":"Beni",
+  "mairag":"Tía Maira",
 
   "catarinap": "Catarina",
   "lucap": "Luca",
@@ -38,6 +41,8 @@ const invitados = {
   "horaciop":"Padrino",
   "gimenap":"Primas",
   "nestorp":"Primos",
+  "matiasb":"Mati",
+  "micaelay":"Mica",
 };
 
 function checkCode() {
